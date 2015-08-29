@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jbgo/fastball.svg?branch=master)](https://travis-ci.org/jbgo/fastball)
+
 # Fastball
 
 The safest, fastest way to build and deploy dynamic applications.
@@ -54,7 +56,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/fastball.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jbgo/fastball.
 
 
 ## License
