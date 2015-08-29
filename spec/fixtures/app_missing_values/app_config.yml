@@ -1,0 +1,13 @@
+---
+environment: staging
+elasticsearch_url: http://elastic.example.com:9200
+
+db:
+  name: sample_app
+  host: postgres.example.com
+  user: sample_app
+  pass: 31N+jv0xOwLSUW01wTzpTw==
+
+aws:
+  access_key: kgHgzioDcY0
+  secret_key: OUrHEEfoYX2ICPJt1OOKjEDihtZtyxRHeZEXYvS+glk

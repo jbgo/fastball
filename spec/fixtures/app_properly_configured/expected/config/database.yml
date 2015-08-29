@@ -1,0 +1,8 @@
+---
+staging:
+  adapter: postgresql
+  database: sample_app_staging
+  host: postgres.example.com
+  username: sample_app
+  password: 31N+jv0xOwLSUW01wTzpTw==
+
