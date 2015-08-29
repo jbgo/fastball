@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Pitstop::HashDot do
+describe Fastball::HashDot do
   it 'maps methods to keys' do
-    h = Pitstop::HashDot.new foo: 'bar', 'biz' => 42
+    h = Fastball::HashDot.new foo: 'bar', 'biz' => 42
 
     expect(h).to respond_to(:foo)
     expect(h.foo).to eq('bar')
@@ -12,7 +12,7 @@ describe Pitstop::HashDot do
   end
 
   it 'allows nested key lookups' do
-    h = Pitstop::HashDot.new nested: { 'hashes' => { are_fun: 'hooray!' } }
+    h = Fastball::HashDot.new nested: { 'hashes' => { are_fun: 'hooray!' } }
     expect(h.nested.hashes.are_fun).to eq('hooray!')
   end
 

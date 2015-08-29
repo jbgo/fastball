@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Pitstop do
+describe Fastball do
   it 'has a version number' do
-    expect(Pitstop::VERSION).not_to be nil
+    expect(Fastball::VERSION).not_to be nil
   end
 end

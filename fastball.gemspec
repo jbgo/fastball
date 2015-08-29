@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'pitstop/version'
+require 'fastball/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "pitstop"
-  spec.version       = Pitstop::VERSION
+  spec.name          = "fastball"
+  spec.version       = Fastball::VERSION
   spec.authors       = ["Jordan Bach"]
   spec.email         = ["jordanbach@gmail.com"]
 
   spec.summary       = %q{The safest, fastest way to build and deploy dynamic applications.}
-  spec.homepage      = "https://github.com/jbgo/pitstop"
+  spec.homepage      = "https://github.com/jbgo/fastball"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

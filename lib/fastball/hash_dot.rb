@@ -1,4 +1,4 @@
-class Pitstop::HashDot
+class Fastball::HashDot
 
   def initialize(hash={})
     @hash = {}

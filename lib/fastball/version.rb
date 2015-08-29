@@ -1,3 +1,3 @@
-module Pitstop
+module Fastball
   VERSION = "0.1.0"
 end
