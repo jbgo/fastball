@@ -37,8 +37,8 @@ rake fastball:config  # generate environment specific configuration files
 
 ## Documentation
 
-See {Fastball::Config} for documentation and examples of using
-Fastball to generate config files.
+See [Fastball::Config](http://www.rubydoc.info/github/jbgo/fastball/master/Fastball/Config)
+for documentation and examples of using Fastball to generate config files.
 
 ## Roadmap
 
