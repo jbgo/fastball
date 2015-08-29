@@ -6,6 +6,13 @@ module Fastball
 
   # The Fastball::Config generates environment specific configuration files.
   #
+  # == usage
+  #
+  # Set up your application's configuration templates and +app_config.yml+ file
+  # as described below, then run the following rake task:
+  #
+  #     `rake fastball:config`
+  #
   # == Conventions
   #
   # Fastball looks for ERB configuration templates in the following locations
