@@ -61,7 +61,7 @@ module Fastball
   #
   #     !!!yaml
   #     ---
-  #     <%= staging %>:
+  #     <%= rails_env %>:
   #       adapter: mysql2
   #       host: <%= db.host %>
   #       username: <%= db.username %>
@@ -71,6 +71,7 @@ module Fastball
   #
   #     !!!yaml
   #     ---
+  #     rails_env: staging
   #     db:
   #       host: localhost
   #       username: dbuser
