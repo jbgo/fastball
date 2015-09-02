@@ -21,15 +21,17 @@ describe Fastball::Config do
       end
     end
 
-    context 'properly configured application' do
-      before { set_pwd 'spec/fixtures/app_properly_configured' }
-      after  { restore_pwd }
+    %w(yml json).each do |ext|
+      context 'configured properly with app_config.yml' do
+        before { set_pwd "spec/fixtures/app_properly_configured_#{ext}" }
+        after  { restore_pwd }
 
-      it 'renders all erb templates found in the config/ dir' do
-        Fastball::Config.generate
+        it 'renders all erb templates found in the config/ dir' do
+          Fastball::Config.generate
 
-        @config_paths.each do |path|
-          expect(File.read(path)).to eq(File.read(File.join('expected', path)))
+          @config_paths.each do |path|
+            expect(File.read(path)).to eq(File.read(File.join('expected', path)))
+          end
         end
       end
     end

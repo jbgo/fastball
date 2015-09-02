@@ -1,5 +1,6 @@
 require 'erb'
 require 'forwardable'
+require 'json'
 require 'yaml'
 
 module Fastball
@@ -112,9 +113,17 @@ module Fastball
     end
 
     def load_config_values
-      @config ||= HashDot.new YAML.load(File.read('app_config.yml'))
-    rescue
-      raise MissingAppConfig.new("expecting app_config.yml to exist in the current directory")
+      @config ||= HashDot.new load_config_hash
+    end
+
+    def load_config_hash
+      if File.exists?('app_config.yml')
+        YAML.load File.read('app_config.yml')
+      elsif File.exists?('app_config.json')
+        JSON.parse File.read('app_config.json')
+      else
+        raise MissingAppConfig.new("expecting app_config.yml to exist in the current directory")
+      end
     end
 
     def render_template(path)

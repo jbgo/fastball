@@ -1,0 +1,14 @@
+{
+    "aws": {
+        "access_key": "kgHgzioDcY0",
+        "secret_key": "OUrHEEfoYX2ICPJt1OOKjEDihtZtyxRHeZEXYvS+glk"
+    },
+    "db": {
+        "host": "postgres.example.com",
+        "name": "sample_app",
+        "pass": "31N+jv0xOwLSUW01wTzpTw==",
+        "user": "sample_app"
+    },
+    "elasticsearch_url": "http://elastic.example.com:9200",
+    "environment": "staging"
+}
