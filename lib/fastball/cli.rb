@@ -1,3 +1,5 @@
+require 'fastball'
+
 module Fastball
   class CLI
     attr_reader :argv
