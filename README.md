@@ -35,6 +35,12 @@ $ rake -T fastball
 rake fastball:config  # generate environment specific configuration files
 ```
 
+You can also run fastball as a standalone command.
+
+```
+fastball config
+```
+
 ## Documentation
 
 See [Fastball::Config](http://www.rubydoc.info/github/jbgo/fastball/master/Fastball/Config)
