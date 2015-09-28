@@ -50,6 +50,19 @@ describe Fastball::Config do
         end
       end
     end
+
+    context 'when mustache/jinja2 style template vars are used' do
+      before { set_pwd 'spec/fixtures/app_alt_syntax' }
+      after { restore_pwd }
+
+      it 'pre-processes and renders all erb templates' do
+        Fastball::Config.generate
+
+        @config_paths.each do |path|
+          expect(File.read(path)).to eq(File.read(File.join('expected', path)))
+        end
+      end
+    end
   end
 
 end

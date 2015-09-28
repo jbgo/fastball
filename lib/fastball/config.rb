@@ -128,7 +128,7 @@ module Fastball
 
     def render_template(path)
       progress  "rendering '#{path}'"
-      template = ERB.new File.read(path)
+      template = ERB.new pre_process_template(path)
       template_binding = config.instance_eval { binding }
       template.result template_binding
     end
@@ -137,6 +137,12 @@ module Fastball
       real_path = path.sub(/\.erb$/, '')
       progress "saving '#{real_path}'"
       File.write real_path, result
+    end
+
+    def pre_process_template(path)
+      File.read(path)
+          .gsub(/\{\{ */, '<%= ')
+          .gsub(/ *\}\}/, ' %>')
     end
 
   end
