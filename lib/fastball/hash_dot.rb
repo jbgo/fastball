@@ -5,7 +5,7 @@ module Fastball
   # == Example
   #
   #     !!!
-  #     ruby> h = Fastball::HashDot.new name: { name: 'Jordan', state: 'Texas' }
+  #     ruby> h = Fastball::HashDot.new contact: { name: 'Jordan', state: 'Texas' }
   #     ruby> h.contact.name
   #      => "Jordan"
   #     ruby> h.contact.state
